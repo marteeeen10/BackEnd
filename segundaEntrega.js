@@ -91,7 +91,7 @@ const manager = new ProductManager();
 
 manager.addProduct('TV', 'TV LED 24 Pulgadas', 15000, 'tv.pjg', 101, 25)
 manager.addProduct('LAVARROPA', 'Lavarropa Drean', 49500, 'lavarropa.pjg', 102, 28)
-manager.addProduct('Exprimidora', 'Exprimidora Cocina', 4500, 'exprimidora.pjg', 103, 68)
+manager.addProduct('Exprimidora', 'Exprimidora Cocina', 4500, 'exprimidora.pjg', 103, 78)
 // manager.getProductsById(1)
 // manager.getProducts()
 // manager.updateProduct(2, {"title": 'Lavarropas'})

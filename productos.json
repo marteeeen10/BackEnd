@@ -1,0 +1,29 @@
+[
+  {
+    "title": "TV",
+    "description": "TV LED 24 Pulgadas",
+    "price": 15000,
+    "thumbnail": "tv.pjg",
+    "code": 101,
+    "stock": 25,
+    "id": 1
+  },
+  {
+    "title": "LAVARROPA",
+    "description": "Lavarropa Drean",
+    "price": 49500,
+    "thumbnail": "lavarropa.pjg",
+    "code": 102,
+    "stock": 28,
+    "id": 2
+  },
+  {
+    "title": "Exprimidora",
+    "description": "Exprimidora Cocina",
+    "price": 4500,
+    "thumbnail": "exprimidora.pjg",
+    "code": 103,
+    "stock": 68,
+    "id": 3
+  }
+]

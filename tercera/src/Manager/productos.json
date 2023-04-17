@@ -1,0 +1,92 @@
+[
+  {
+    "title": "TV",
+    "description": "TV LED 24 Pulgadas",
+    "price": 15000,
+    "thumbnail": "tv.pjg",
+    "code": 101,
+    "stock": 25,
+    "id": 1
+  },
+  {
+    "title": "LAVARROPA",
+    "description": "Lavarropa Drean",
+    "price": 49500,
+    "thumbnail": "lavarropa.pjg",
+    "code": 102,
+    "stock": 28,
+    "id": 2
+  },
+  {
+    "title": "Exprimidoraaaa",
+    "description": "Exprimidora Cocina",
+    "price": 4500,
+    "thumbnail": "exprimidora.pjg",
+    "code": 103,
+    "stock": 728,
+    "id": 3
+  },
+  {
+    "title": "Jueguera",
+    "description": "Juguera chica",
+    "price": 14500,
+    "thumbnail": "juguera.pjg",
+    "code": 104,
+    "stock": 758,
+    "id": 4
+  },
+  {
+    "title": "Batidora",
+    "description": "Batidora Cocina",
+    "price": 45400,
+    "thumbnail": "batidora.pjg",
+    "code": 105,
+    "stock": 768,
+    "id": 5
+  },
+  {
+    "title": "Lavavajillas",
+    "description": "Lavavajillas Cocina",
+    "price": 47500,
+    "thumbnail": "lavavajillas.pjg",
+    "code": 106,
+    "stock": 785,
+    "id": 6
+  },
+  {
+    "title": "Secador Pelo",
+    "description": "Secador de pelo",
+    "price": 45080,
+    "thumbnail": "secadorp.pjg",
+    "code": 107,
+    "stock": 728,
+    "id": 7
+  },
+  {
+    "title": "Tv Full Led",
+    "description": "Tv full Sony",
+    "price": 47500,
+    "thumbnail": "tvfull.pjg",
+    "code": 108,
+    "stock": 738,
+    "id": 8
+  },
+  {
+    "title": "Secadora",
+    "description": "Secadora ropa",
+    "price": 45500,
+    "thumbnail": "seca.pjg",
+    "code": 109,
+    "stock": 778,
+    "id": 9
+  },
+  {
+    "title": "Mapeadora",
+    "description": "Trapo limpieza",
+    "price": 45200,
+    "thumbnail": "map.pjg",
+    "code": 110,
+    "stock": 478,
+    "id": 10
+  }
+]

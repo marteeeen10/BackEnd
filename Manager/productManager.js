@@ -17,9 +17,7 @@ export default class ProductManager {
         try {
             const products = await this.getProducts();
             const product = {title, description, price, thumbnail, code, stock, category, status}
-            if (
-                (!title, !description, !price, !code, !stock, !category, !status)
-                ) {
+            if ((!title || !description || !price || !code || !stock || !category || !status)) {
                 console.log("complete todos los camposssss");
                 return null;
             }
@@ -42,13 +40,6 @@ export default class ProductManager {
             console.log(error)
         }
         
-
-        
-        //Validar campos incompletos y agregar producto
-/*         if (Object.values(product).every(obj => obj)){
-        }else{
-            return console.log('Campos incompletos')
-        } */
 }
     // Listar todos los productos
     getProducts = async () => {
@@ -57,7 +48,6 @@ export default class ProductManager {
         if (data) {
             const getFileProducts = await fs.promises.readFile(this.path, 'utf-8')
             const products = JSON.parse(getFileProducts)
-            //console.log(products)
             return products
         }else {
             console.log("leyendo desde pmanager");
@@ -89,14 +79,6 @@ export default class ProductManager {
             const newProduct = products.map((p) =>
             p.id == id ? { ...p, ...obj } : p);
             fs.promises.writeFile(this.path, JSON.stringify(newProduct, null, "\t"));
-            
-
-/*             const getFileProducts = await fs.promises.readFile(this.path, 'utf-8')
-            const products = JSON.parse(getFileProducts)
-            const returnObject = Object.assign(products[id-1], obj)
-            console.log(products[id-1])
-            this.products = products
-            this.appendProduct() */
         } 
         catch (error) {
             console.log(error)
@@ -104,12 +86,6 @@ export default class ProductManager {
 }
     deleteProduct = async (id) => {
         try {
-/*             const getFileProducts = await fs.promises.readFile(this.path, 'utf-8')
-            const products = JSON.parse(getFileProducts)
-            products.splice(id-1,1)
-            this.products = products
-            this.appendProduct() */
-
             const products = await this.getProducts();
             fs.promises.writeFile(this.path, JSON.stringify(id, null, "\t"));
         } 

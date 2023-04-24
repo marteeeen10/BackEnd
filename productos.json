@@ -102,11 +102,33 @@
 		"title": "Hidro Lavadora Profesional",
 		"description": "Marca Profesional Gama",
 		"price": "1700",
-		"thumbnail": "[]",
+		"thumbnail": [],
 		"code": 1103,
 		"stock": 478,
 		"category": "map.pjg",
 		"status": "true",
 		"id": 11
+	},
+	{
+		"title": "Desmalezadora",
+		"description": "Stihl Fs220",
+		"price": 150000,
+		"thumbnail": [],
+		"code": 145,
+		"stock": 28,
+		"category": "Profesional    ",
+		"status": "true",
+		"id": 12
+	},
+	{
+		"title": "Desmalezadora Stihl",
+		"description": "Stihl Fs280",
+		"price": 150000,
+		"thumbnail": [],
+		"code": 146,
+		"stock": 28,
+		"category": "Profesional    ",
+		"status": "true",
+		"id": 13
 	}
 ]

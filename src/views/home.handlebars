@@ -1,0 +1,15 @@
+<h1>Products</h1>
+<div id="product-container">
+  {{#each allProducts}}
+  <div>
+  <div class="cardContainer">
+            <h2>{{title}}</h2>
+            <div class="imgConteiner" >
+            <img  src="{{thumbnail}}" alt="{{title}}">
+            </div>
+            <p class="description">{{description}}</p>
+            <p class="price">$ {{price}}</p>
+          </div>
+  </div>
+  {{/each}}
+</div>

@@ -56,3 +56,72 @@
     object-fit: cover;
   }
 
+  #pageHandler {
+    width: 80vw;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #pageHandler p {
+    margin: 20px;
+    color: #e7832b;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  #pageHandler button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #e7832b;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #1e1e1e;
+    color: white;
+  }
+  #controles {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+  }
+  #controles form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #controles select {
+    margin-right: 30px;
+  }
+  #controles button {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 2px solid #e7832b !important;
+    margin-top: 30px;
+    background-color: #1e1e1e;
+    color: white;
+  }
+  #controles select {
+    height: 30px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 2px solid #e7832b !important;
+    background-color: #1e1e1e;
+    color: white;
+  }
+  .cardContainer button {
+    margin-top: 10px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 2px solid #e7832b !important;
+    background-color: #1e1e1e;
+    color: white;
+  }
+  #labels {
+    color: white;
+  }
+  

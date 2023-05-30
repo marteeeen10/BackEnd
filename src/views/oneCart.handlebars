@@ -1,0 +1,21 @@
+<div id="cartContainer">
+    
+  <h1>Cart</h1>
+
+  <div id="productContainer">
+    
+    {{#each cartSelected.products}}
+  
+        <div id="cardCart">
+      <div> 
+      <img src="{{product.thumbnail}}" alt="">
+      <p>Producto :{{product.title}}</p>
+      </div>
+      <p>Categoria :{{product.category}}</p>
+      <p>Cantidad :{{quantity}}</p>
+      </div>
+
+    {{/each}}
+  </div>
+
+</div>

@@ -9,7 +9,7 @@ const productsManager = new ProductsManager();
 const cartsManager = new CartsManager();
 
 router.get("/", async (req, res) => {
-  const { page = 1, sort = 1, limit = 10 } = req.query;
+  const { page = 1, sort = 1, limit = 3 } = req.query;
 
   const options = {
     page,
@@ -51,8 +51,5 @@ router.get("/cart/:cid", async (req, res) => {
   res.render("oneCart", { cartSelected, css: "cart" });
 });
 
-router.get("/chat", async (req, res) => {
-  res.render("chat", { css: "chat" });
-});
 
 export default router;

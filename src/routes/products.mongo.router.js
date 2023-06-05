@@ -2,7 +2,6 @@ import { Router } from "express";
 import ProductsManager from "../dao/mongo/managers/productManager.js";
 import productModel from "../dao/mongo/models/products.js";
 
-
 const router = Router();
 
 export default router;

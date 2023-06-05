@@ -8,8 +8,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(38, 38, 38);
-    color: #e7832b;
+    background-color: lightseagreen;
+    color: black;
     justify-content: center;
     overflow-x: hidden;
   }
@@ -25,7 +25,7 @@
   .formDiv {
     width: 30vw;
     height: 60vh;
-    border: 2px solid #e7832b;
+    border: 2px solid black;
     border-radius: 20px;
     -webkit-box-shadow: 1px 3px 19px -3px #000000;
     box-shadow: 1px 3px 19px -3px #000000;
@@ -53,10 +53,10 @@
   }
   button {
     background-color: transparent;
-    border: 2px solid #e7832b;
+    border: 2px solid black;
     width: 100px;
     height: 30px;
     border-radius: 40px;
-    color: white;
+    color: black;
     margin-top: 20px;
   }

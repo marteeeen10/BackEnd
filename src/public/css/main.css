@@ -2,7 +2,7 @@
     width: 100vw;
     height: 60px;
     position: relative;
-    background-color: rgb(38, 38, 38);
+    background-color: lightseagreen;
     margin-bottom: 30px;
   }
   
@@ -14,7 +14,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(-45deg, #e6740a 0%, #ff930f 100%);
     transform: translate3d(0px, 5px, 0) scale(1);
     filter: blur(20px);
     opacity: var(0.7);
@@ -41,7 +40,7 @@
     margin-left: 60px;
     align-items: center;
     list-style: none;
-    color: white;
+    color: black;
   }
   .navBar ul li {
     margin-right: 30px;
@@ -49,6 +48,6 @@
   }
   .navBar ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: 600;
   }

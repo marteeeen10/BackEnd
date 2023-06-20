@@ -1,12 +1,11 @@
-const form = document.getElementById("loginForm");
+const form = document.getElementById("restoreForm");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const data = new FormData(form);
   const obj = {};
   data.forEach((value, key) => (obj[key] = value));
-
-  const response = await fetch("/api/sessions/login", {
+  const response = await fetch("/api/sessions/restorePassword", {
     method: "POST",
     body: JSON.stringify(obj),
     headers: {
@@ -14,13 +13,14 @@ form.addEventListener("submit", async (event) => {
     },
   });
   const responseData = await response.json();
+  console.log(responseData);
   if (responseData.status === "success") {
     Swal.fire({
       toast: true,
       position: "top-end",
       showConfirmButton: false,
       timer: 2000,
-      title: `Logueado`,
+      title: `Cambiaste tu clave!`,
       icon: "success",
     });
     window.location.replace("/");
@@ -29,8 +29,8 @@ form.addEventListener("submit", async (event) => {
       toast: true,
       position: "top-end",
       showConfirmButton: false,
-      timer: 2500,
-      title: `Usuario o clave incorrectos`,
+      timer: 2000,
+      title: `El password es el mismo que tenias`,
       icon: "error",
     });
   }

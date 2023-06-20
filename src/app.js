@@ -12,6 +12,8 @@ import MongoStore from "connect-mongo";
 import session from "express-session";
 import productModel from "../src/dao/mongo/models/products.js";
 import messagesModel from "../src/dao/mongo/models/messages.js";
+import passport from "passport";
+import initializePassport from "./config/passport.config.js";
 
 const app = express();
 const connection = mongoose.connect(
@@ -23,7 +25,7 @@ app.use(
     store: new MongoStore({
       mongoUrl:
       "mongodb+srv://martinpe:123@clustercomercio.eeuskzl.mongodb.net/ecommerce?retryWrites=true&w=majority",
-      ttl: 3600,
+      ttl: 36000,
     }),
     secret: "maquinaria",
     resave: false,
@@ -46,6 +48,9 @@ app.use(express.static(`${__dirname}/public`));
 app.engine('handlebars', handlebars.engine());
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'handlebars');
+
+app.use(passport.initialize());
+initializePassport();
 
 app.use("/api/products", ProductsRouter);
 app.use("/api/carts", CartsRouter);

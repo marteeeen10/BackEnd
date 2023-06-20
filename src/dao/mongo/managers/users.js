@@ -17,6 +17,10 @@ export default class UserManager {
     return userModel.findByIdAndUpdate(id, user);
   };
 
+  updateOne = (parm, elem) => {
+    return userModel.updateOne(parm, elem);
+  };
+  
   deleteUsers = (id) => {
     return userModel.findByIdAndDelete(id);
   };

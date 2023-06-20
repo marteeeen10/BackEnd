@@ -2,13 +2,14 @@ import { Router } from "express";
 import ProductsManager from "../dao/mongo/managers/productManager.js";
 import CartsManager from "../dao/mongo/managers/cartManager.js";
 import productModel from "../dao/mongo/models/products.js";
+import { privacy } from "../middlewares/auth.js";
 
 const router = Router();
 
 const productsManager = new ProductsManager();
 const cartsManager = new CartsManager();
 
-router.get("/", async (req, res) => {
+router.get("/", privacy("PRIVATE"), async (req, res) => {
   const { page = 1 } = req.query;
   let { limit = 5, sort = 1 } = req.query;
 
@@ -48,28 +49,36 @@ router.get("/", async (req, res) => {
     css: "products",
   });
 });
-router.get("/realTimeProducts", async (req, res) => {
+router.get("/realTimeProducts", privacy("PRIVATE"), async (req, res) => {
   res.render("realTimeProducts", { css: "realTimeProducts" });
 });
 
-router.get("/cart", async (req, res) => {
+router.get("/cart", privacy("PRIVATE"), async (req, res) => {
   const carts = await cartsManager.getCarts();
   res.render("cart", { carts, css: "cart" });
 });
 
-router.get("/cart/:cid", async (req, res) => {
+router.get("/cart/:cid", privacy("PRIVATE"), async (req, res) => {
   const cid = req.params.cid;
   const carts = await cartsManager.getCarts();
   const cartSelected = carts.find((cart) => cart._id == cid);
   res.render("oneCart", { cartSelected, css: "cart" });
 });
 
-router.get("/register", async (req, res) => {
+router.get("/register", privacy("NO_AUTHENTICATED"), async (req, res) => {
   res.render("register", { css: "register" });
 });
 
-router.get("/login", async (req, res) => {
+router.get("/login", privacy("NO_AUTHENTICATED"), async (req, res) => {
   res.render("login", { css: "login" });
 });
+
+router.get(
+  "/restorePassword",
+  privacy("NO_AUTHENTICATED"),
+  async (req, res) => {
+    res.render("restorePassword", { css: "login" });
+  }
+);
 
 export default router;
